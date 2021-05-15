@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.6.0",
+    "@slidev/theme-default": "^0.6.0",
+    "@slidev/theme-seriph": "^0.6.0"
+  },
+  "name": "vueday-enterjs-vue3"
+}
