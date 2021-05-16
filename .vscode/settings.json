@@ -1,2 +1,11 @@
 {
+  "cSpell.words": [
+    "Mehr"
+  ],
+  "cSpell.language": "en,de",
+  "emmet.includeLanguages": {
+    "markdown": "html",
+    "md": "html"
+  },
+  "emmet.triggerExpansionOnTab": true
 }
