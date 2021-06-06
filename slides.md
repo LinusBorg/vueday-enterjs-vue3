@@ -1,34 +1,23 @@
 ---
 # try also 'default' to start simple
-theme: default 
+theme: default
+colorSchema: light
 # random image from a curated Unsplash collection by Anthony
 background: 'https://source.unsplash.com/collection/94734566/1920x1080'
 highlighter: shiki
 # apply any windi css classes to the current slide
-class: 'text-center'
-# some information about the slides, markdown enabled
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-  
-  Learn more at [Sli.dev](https://sli.dev)
+# class: 'text-center'
+layout: cover
 ---
 
 # Vue 3 > Vue 2 + 1
-
 Mehr als ein Major Release
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 p-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
 
 ---
 
 <div class="text-center">
   <h2 class="text-2xl">
-  Vue 3.0.0 wurde am XX.10.2020 veröffentlicht 
+  Vue 3.0.0 wurde am 18.09.2020 veröffentlicht 
   </h2>
   <div class="mt-24">
     <p v-click>
@@ -42,16 +31,39 @@ Mehr als ein Major Release
           />    
       </video> 
     </div>
-    <p v-click class="mt-4">noch nicht ganz</p>
+    <p v-click class="mt-4">noch nicht ganz!</p>
   </div>
 </div>
 
+---
+layout: quote
+---
+
+# Semver
+ 
+<!-- <div class="mt-12 min-h-1"></div> -->
+
+Given a version number MAJOR.MINOR.PATCH, increment the
+
+* MAJOR version when you make incompatible API changes,
+* MINOR version when you add functionality in a backwards compatible manner, and
+* PATCH version when you make backwards compatible bug fixes.
+
+Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 ---
 
-# Vue 3 ist ein kleiner und großer Schritt zugleich
+# Vue 3 ist ein kleines und großes Major Release
+ 
 
-_
+<div v-click class="mt-12">
+groß, denn:
+
+* neu geschrieben - in Typescript
+* Compiler und VirtualDOM Implementierung neu und grundverschieden
+* ermöglicht erhebliche Performancezugewinne
+* Ökosystem muss nachziehen um kompatibel zu sein.
+</div>
 
 <div v-click class="mt-8">
 klein, denn:
@@ -59,16 +71,46 @@ klein, denn:
 * Änderungen (breaking changes) sind zwar recht zahlreich...
 * ..aber: Umfang und Komplexität überschaubar
 * Wer eine Vue 2 App schreiben kann, kann mit Vue 3 direkt loslegen
+* "Compat Build" vereinfacht die schrittweise Migration von Apps
 </div>
 
-<div v-click class="mt-8">
-groß, denn:
 
-* Vue 3 wurde von grund auf neu geschrieben
-* Interne APIs sind nicht mehr deckungsgleich
-* Compiler und VirtualDOM Implementierung sind grundverschieden
-* ermöglicht erhebliche Performancezugewinne
-</div>
+---
+layout: cover
+
+---
+
+# Ein großes Major Release
+## Was bedeutet das genau?
+
+---
+
+# Wir setzen voll auf Typescript
+
+<div class="mt-12 min-h-1"></div>
+
+* Rewrite aller core libraries in Typescript
+* daher stets mit aktuellen Type Definitions*
+* Voraussetzung für besseren IDE-Support
+
+---
+
+# Neuer Compiler
+Bessere Performance
+
+
+
+---
+
+# Wo steht das offizielle Ökosystem?
+Ein Blick auf die Zeitleiste
+
+<div class="mt-12 min-h-1"></div>
+
+* 18.09.2020 - Vue 3.0 **stable**
+* xx.xx.2020 - Vuex 4.0 **stable** 
+* xx.xx.2021 - Vue Router 3.0 **stable**
+* 
 
 ---
 
