@@ -85,7 +85,7 @@ layout: section
 
 ---
 
-# Wo steht das Ökosystem?
+# Wo steht das Framework als ganzes?
 Offizielle Libraries
 
 <div class="mt-4 min-h-1"></div>
@@ -95,7 +95,7 @@ Offizielle Libraries
 * xx.xx.2020 - Vuex 4.0 **stable** 
 * xx.xx.2021 - Vue Router 3.0 **stable**
 * xx.xx.2021 - vue-loader 16.0 **stable**
-* 
+* xx.xx.2021 - eslint-plugin-vue **stable**
 
 **Beta**
 
@@ -182,16 +182,121 @@ PS: Vue 2 wird morgen quasi 5 Jahre alt! 🥳
 
 ---
 
-# Neuer Compiler
-Bessere Performance
+# Neuer Compiler & VirtualDOM
 
+  <div class="mt-8 min-h-1 text-2xl font-bold">
+  Compiler
+  </div>
+
+  <div class="mt-4">
+
+  * Blocks - flache Arrays mit dynamischen Elementen
+  * Hoisting von statischen Elementen
+  * Compiler Flags für dynamische Elemente
+
+</div>
+
+<div v-click class="mt-8 min-h-1 text-2xl font-bold">
+Virtal DOM
+</div>
+
+<div v-after class="mt-4">
+
+* VNodes sind nun flache Objekte
+  * geringerer Memory Footprint
+  * schnelleres Diffing
+* Component slots sind functions
+
+</div>
+
+---
+
+# Beispiel
+
+<div class="font-sm">
+  <iframe src="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8aDE+V2VsY29tZSE8L2gxPlxuICA8ZGl2IGNsYXNzPVwic3RhdGljXCI+XG4gICAgPE15Q29tcG9uZW50XG4gICAgICBwcm9wMT1cInN0YXRpY1wiXG4gICAgICA6c3VidGl0bGU9XCJ0aXRsZVwiXG4gICAgPlxuICAgICAgPHNwYW4+IHt7IG1zZyB9fTwvc3Bhbj5cbiAgICA8L015Q29tcG9uZW50PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4gIGV4cG9ydCBkZWZhdWx0IHtcbiAgICBzZXR1cCgpIHtcblx0XHRcdGNvbnN0IG1zZyA9ICdIZWxsbyBXb3JsZCEnXG5cdFx0XHRjb25zdCBzdWJ0aXRsZSA9IHJlZignVGhpcyBpcyB0aGUgc3VidGl0bGUnKVxuICAgICAgcmV0dXJuIHtcbiAgICAgICAgbXNnLCBzdWJ0aXRsZVxuICAgICAgfVxuICAgIH1cbiAgfVxuPC9zY3JpcHQ+IiwiTXlDb21wb25lbnQudnVlIjoiPHRlbXBsYXRlPlxuICA8c2xvdCAvPlxuPC90ZW1wbGF0ZT4ifQ=="
+    width="900"
+    height="400"
+></iframe>
+</div>
+
+---
+layout: section
+---
+
+# Ein "kleines" Major Release
+Breaking Changes aus Nutzer-Sicht
+
+---
+
+# Was hat sich _genau_ geändert?
+
+<div class="mt-12 min-h-1"></div>
+
+* Es gibt 33 Einträge im Migration Guide
+* davon sind 3 aber neue Funktionen (Fragments, Suspense)
+* Die meisten "Breaking Changes" sind "one-liner" Fixes.
+
+
+<div class="mt-8 min-h-1"></div>
+<span v-click class="text-2xl">Was bedeutet das für Developer?</span>
+
+<div v-click class="mt-4">
+
+* Die Migration (fast) jedes Breaking Change ist *einfach*
+* Aber die Migration _aller_ Changes ist *zeitaufwändig*
+
+</div>
+
+---
+
+# Globale APIs
+
+<div class="flex justify-between">
+  <div class="flex-grow mr-2">
+
+```js{all|1|6-8|10|1,6-10}
+import Vue from 'vue'
+import Dialog from './Dialog.vue'
+import ClickOutside from '.clickOutside.js'
+import PortalVue from 'portal-vue'
+
+Vue.component('Dialog', Dialog)
+Vue.directive('clickOutside', ClickOutside)
+Vue.use(PortalVue)
+
+new Vue(App).$mount('#app')
+```
+
+  </div>
+  <div class="flex-grow">
+
+```js{all|1|6,11|7-10|7-11}
+import { createApp } from 'vue'
+import Dialog from './Dialog.vue'
+import ClickOutside from '.clickOutside.js'
+import PortalVue from 'portal-vue'
+
+const app = createApp(App)
+app.component('Dialog', Dialog)
+app.directive('clickOutside', ClickOutside)
+app.use(PortalVue)
+
+app.mount('#app')
+```
+
+  </div>
+</div>
+
+<hr class="mt-4 mb-8">
+
+* Einmalige Änderungen
+* Verbesserung: Mehrere Apps auf einer Seite sind besser isoliert.
 
 
 ---
 
-# Vue 3 aus Nutzer-Sicht
-
-Änderungen sind überschaubar
+# Lifecycle Hooks
 
 <div class="flex justify-between">
   <div class="flex-grow mr-2">
@@ -233,3 +338,26 @@ export default {
 
   </div>
 </div>
+
+---
+layout: section
+---
+
+# `@vue/compat`
+## Migration mit der Compat Build (Vue 3.1)
+
+
+---
+layout: section
+---
+
+# Und nun?
+## Wohin die Reise geht
+
+---
+
+# Dieser Talk wurde mit Slidev gebaut
+
+* Vue 3
+* Vite
+* 
