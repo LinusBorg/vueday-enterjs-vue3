@@ -76,7 +76,7 @@ klein, denn:
 
 
 ---
-layout: cover
+layout: section
 
 ---
 
@@ -85,13 +85,100 @@ layout: cover
 
 ---
 
-# Wir setzen voll auf Typescript
+# Wo steht das Ökosystem?
+Offizielle Libraries
+
+<div class="mt-4 min-h-1"></div>
+
+* 18.09.2020 - Vue 3.0 **stable**
+* xx.xx.2020 - Vue CLI (Vue 3 Support) **stable**
+* xx.xx.2020 - Vuex 4.0 **stable** 
+* xx.xx.2021 - Vue Router 3.0 **stable**
+* xx.xx.2021 - vue-loader 16.0 **stable**
+* 
+
+**Beta**
+
+* vue-devtools 6.0.0-beta.11
+* rollup-plugin-vue: 6.0.0-beta.11
+
+**Release Candidate**
+* vue-test-utils
+
+---
+# Wer macht was?
+
+TODO: show team and responsibilities
+
+---
+
+# Community Ökosystem
 
 <div class="mt-12 min-h-1"></div>
 
-* Rewrite aller core libraries in Typescript
-* daher stets mit aktuellen Type Definitions*
-* Voraussetzung für besseren IDE-Support
+* Vuetify
+* Quasar
+* Nuxt
+
+---
+
+# Next -> Latest
+ 
+<div class="mt-12 min-h-1" ></div>
+
+Bisher:
+
+```bash
+npm i vue@next
+```
+
+Ab Q3-2021:
+
+```bash
+npm i vue
+```
+
+
+---
+layout: section
+---
+
+# Wozu dieser Aufwand?
+
+---
+
+# Alles auf Typescript - warum?
+
+<div class="mt-12 min-h-1"></div>
+
+* Typescript ist mittlerweile allgegenwärtig
+* Bisher wurden Types manuell gepflegt
+
+**Vue 3**
+
+* komplett in TS geschrieben
+* klare Abgrenzung der Module in einem Monorepo
+
+**Ergebnis**
+
+* Sourcecode ist klarer strukturiert, Types erleichtern Verständnis
+* Ziel: Einstiegshürde für neue Contributors senken
+* Nebeneffekt: Bessere, automatisch generierte Types für die Enduser
+
+---
+
+# Vue 3 Contributions
+
+* Vue 3:
+  * 1.372 gemergte PRs
+  * 234 Contributors 
+  * ...seit Alpha release seit 03.01.2020
+* im Vergleich: Vue 2
+  * 1.036 merged PRs
+  * 399 Contributors
+  * ... seit 11.06.2016
+
+PS: Vue 2 wird morgen quasi 5 Jahre alt! 🥳
 
 ---
 
@@ -99,18 +186,6 @@ layout: cover
 Bessere Performance
 
 
-
----
-
-# Wo steht das offizielle Ökosystem?
-Ein Blick auf die Zeitleiste
-
-<div class="mt-12 min-h-1"></div>
-
-* 18.09.2020 - Vue 3.0 **stable**
-* xx.xx.2020 - Vuex 4.0 **stable** 
-* xx.xx.2021 - Vue Router 3.0 **stable**
-* 
 
 ---
 
@@ -123,7 +198,7 @@ Ein Blick auf die Zeitleiste
 
 ```html{all|9}
 <template>
-  <h1>{\{ message }}</h1>
+  <h1>{{ message }}</h1>
 </template>
 <script>
 export default {
@@ -142,7 +217,7 @@ export default {
 
 ```html{all|9}
 <template>
-  <h1>{\{ message }}</h1>
+  <h1>{{ message }}</h1>
 </template>
 <script>
 export default {
