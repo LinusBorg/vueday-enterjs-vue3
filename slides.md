@@ -15,27 +15,7 @@ fonts:
 Mehr als ein Major Release
 
 ---
-
-<div class="text-center">
-  <h2 class="text-2xl">
-  Vue 3.0.0 wurde am 18.09.2020 veröffentlicht 
-  </h2>
-  <div class="mt-24">
-    <p v-click>
-      Also ist alles fertig, richtig?
-    </p>
-    <div v-after class="mt-4">
-      <video autoplay loop muted="true" width="200"  class="mx-auto">    
-          <source 
-            src="https://media.giphy.com/media/b2dCcePmq65w8rs4z0/source.mp4"
-            type="video/mp4" 
-          />    
-      </video> 
-    </div>
-    <p v-click class="mt-4">noch nicht ganz!</p>
-  </div>
-</div>
-
+title: Semver
 ---
 
 <div class="mt-12 min-h-1"></div>
@@ -87,8 +67,85 @@ layout: section
 ## Was bedeutet das genau?
 
 ---
+layout: big-bullets
+heading: Alles auf Typescript
+---
 
-# Wo steht das Framework als ganzes?
+* Typescript ist überall
+* Types können in IDEs auch bei JS code unterstützen
+* Manuelle Pflege von Type in Vue 2
+  * Mühsam
+  * Fehleranfällig
+  * unvollständig
+* Types im Sourcecode machen Ihn für<br>Contributors besser navigierbar
+
+---
+layout: 'image-left'
+image: '/vue-monorepo.png'
+---
+
+# Neue Source-Struktur
+
+* Monorepo
+* Packages mit klaren APIs und Verantwortlichkeiten
+* Einfacher für neue Contributors
+
+**Custom Renderer**
+
+* core compiler DOM-unabhängig
+* Community kann eigene Renderer bauen
+* Bsp: <a href="https://troisjs.github.io/">Trois JS</a>
+* "VueNative" wäre nun möglich
+
+---
+title: Trois JS
+---
+
+<iframe src="https://troisjs.github.io/examples/demos/1.html" width="900" height="500"></iframe>
+
+---
+layout: big-bullets
+heading: Performance - Compiler & VirtualDOM
+---
+
+<div class="mt-8 min-h-1 text-2xl font-bold">
+Compiler
+</div>
+
+<div class="mt-4">
+
+* Blocks - flache Arrays mit _dynamischen_ Elementen
+* Compiler Flags für _dynamische_ Elemente
+* Hoisting von _statischen Elementen
+
+</div>
+
+<div v-click class="mt-8 min-h-1 text-2xl font-bold">
+Virtual DOM
+</div>
+
+<div v-after class="mt-4">
+
+* VNodes sind nun flache Objekte
+* geringerer Memory Footprint
+* schnelleres Diffing
+
+</div>
+
+---
+
+# Beispiel
+
+<div class="font-sm">
+  <iframe src="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8aDE+V2VsY29tZSE8L2gxPlxuICA8ZGl2IGNsYXNzPVwic3RhdGljXCI+XG4gICAgPE15Q29tcG9uZW50XG4gICAgICBwcm9wMT1cInN0YXRpY1wiXG4gICAgICA6c3VidGl0bGU9XCJzdWJ0aXRsZVwiXG4gICAgPlxuICAgICAgPHNwYW4+IHt7IG1zZyB9fTwvc3Bhbj5cbiAgICA8L015Q29tcG9uZW50PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4gIGltcG9ydCB7IHJlZiB9IGZyb20gJ3Z1ZSdcbiAgaW1wb3J0IE15Q29tcG9uZW50IGZyb20gJy4vTXlDb21wb25lbnQudnVlJ1xuICBcbiAgZXhwb3J0IGRlZmF1bHQge1xuICAgIGNvbXBvbmVudHM6IHtcbiAgICAgIE15Q29tcG9uZW50LFxuICAgIH0sXG4gICAgc2V0dXAoKSB7XG5cdFx0XHRjb25zdCBtc2cgPSAnSGVsbG8gV29ybGQhJ1xuXHRcdFx0Y29uc3Qgc3VidGl0bGUgPSByZWYoJ1RoaXMgaXMgdGhlIHN1YnRpdGxlJylcbiAgICAgIHJldHVybiB7XG4gICAgICAgIG1zZywgc3VidGl0bGVcbiAgICAgIH1cbiAgICB9XG4gIH1cbjwvc2NyaXB0PiIsIk15Q29tcG9uZW50LnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPHNsb3QgLz5cbjwvdGVtcGxhdGU+XG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuICBwcm9wczogWydwcm9wMScsICdzdWJ0aXRsZSddXG59XG48L3NjcmlwdD4ifQ=="
+    width="900"
+    height="400"
+></iframe>
+</div>
+
+---
+
+# Wo steht das Vue Framework?
 Offizielle Libraries
 
 <div class="mt-4 min-h-1"></div>
@@ -149,29 +206,29 @@ TODO: show team and responsibilities
   <div class="flex-grow">
   
   **Frameworks**
-<!-- 
+
   * Ant Design Vue - <Badge type="success">stable</Badge>
   * Element-Plus - <Badge type="success">stable</Badge>
   * Quasar - <Badge type="warn">Beta</Badge>
   * Vuetify - <Badge type="warn">Alpha</Badge>
   * Nuxt - <Badge type="info">First beta announced</Badge>
-  * ChakraUI/Vue <Badge>under development</Badge> -->
+  * ChakraUI/Vue <Badge>under development</Badge>
 
   </div>
 
-  <div class="flex-grow">
+  <!-- <div class="flex-grow">
   
   **Libraries**
 
   * xx
   
-  </div>
+  </div> -->
 
   <div class="flex-grow">
 
   **Integrationen**
 
-  * Storybook `v6.3`
+  * Storybook <code>v6.3</code>
   * Cypress
   * Vite
 
@@ -198,32 +255,6 @@ npm i vue
 
 
 ---
-layout: section
----
-
-# Wozu dieser Aufwand?
-
----
-
-# Alles auf Typescript - warum?
-
-<div class="mt-12 min-h-1"></div>
-
-* Typescript ist mittlerweile allgegenwärtig
-* Bisher wurden Types manuell gepflegt
-
-**Vue 3**
-
-* komplett in TS geschrieben
-* klare Abgrenzung der Module in einem Monorepo
-
-**Ergebnis**
-
-* Sourcecode ist klarer strukturiert, Types erleichtern Verständnis
-* Ziel: Einstiegshürde für neue Contributors senken
-* Nebeneffekt: Bessere, automatisch generierte Types für die Enduser
-
----
 
 # Vue 3 Contributions
 
@@ -237,46 +268,6 @@ layout: section
   * ... seit 11.06.2016
 
 PS: Vue 2 wird morgen quasi 5 Jahre alt! 🥳
-
----
-
-# Neuer Compiler & VirtualDOM
-
-  <div class="mt-8 min-h-1 text-2xl font-bold">
-  Compiler
-  </div>
-
-  <div class="mt-4">
-
-  * Blocks - flache Arrays mit dynamischen Elementen
-  * Hoisting von statischen Elementen
-  * Compiler Flags für dynamische Elemente
-
-</div>
-
-<div v-click class="mt-8 min-h-1 text-2xl font-bold">
-Virtal DOM
-</div>
-
-<div v-after class="mt-4">
-
-* VNodes sind nun flache Objekte
-  * geringerer Memory Footprint
-  * schnelleres Diffing
-* Component slots sind functions
-
-</div>
-
----
-
-# Beispiel
-
-<!-- <div class="font-sm">
-  <iframe src="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8aDE+V2VsY29tZSE8L2gxPlxuICA8ZGl2IGNsYXNzPVwic3RhdGljXCI+XG4gICAgPE15Q29tcG9uZW50XG4gICAgICBwcm9wMT1cInN0YXRpY1wiXG4gICAgICA6c3VidGl0bGU9XCJzdWJ0aXRsZVwiXG4gICAgPlxuICAgICAgPHNwYW4+IHt7IG1zZyB9fTwvc3Bhbj5cbiAgICA8L015Q29tcG9uZW50PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4gIGltcG9ydCB7IHJlZiB9IGZyb20gJ3Z1ZSdcbiAgaW1wb3J0IE15Q29tcG9uZW50IGZyb20gJy4vTXlDb21wb25lbnQudnVlJ1xuICBcbiAgZXhwb3J0IGRlZmF1bHQge1xuICAgIGNvbXBvbmVudHM6IHtcbiAgICAgIE15Q29tcG9uZW50LFxuICAgIH0sXG4gICAgc2V0dXAoKSB7XG5cdFx0XHRjb25zdCBtc2cgPSAnSGVsbG8gV29ybGQhJ1xuXHRcdFx0Y29uc3Qgc3VidGl0bGUgPSByZWYoJ1RoaXMgaXMgdGhlIHN1YnRpdGxlJylcbiAgICAgIHJldHVybiB7XG4gICAgICAgIG1zZywgc3VidGl0bGVcbiAgICAgIH1cbiAgICB9XG4gIH1cbjwvc2NyaXB0PiIsIk15Q29tcG9uZW50LnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPHNsb3QgLz5cbjwvdGVtcGxhdGU+XG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuICBwcm9wczogWydwcm9wMScsICdzdWJ0aXRsZSddXG59XG48L3NjcmlwdD4ifQ=="
-    width="900"
-    height="400"
-></iframe>
-</div> -->
 
 ---
 layout: section
@@ -351,7 +342,6 @@ app.mount('#app')
 * Einmalige Änderungen
 * Verbesserung: Mehrere Apps auf einer Seite sind besser isoliert.
 
-
 ---
 
 # Lifecycle Hooks
@@ -404,6 +394,42 @@ layout: section
 # `@vue/compat`
 ## Migration mit der Compat Build (Vue 3.1)
 
+---
+layout: big-bullets
+heading: Warum eine Migration Build?
+---
+
+* Migration großer Projekte nicht "an einem Wochenende"
+* Dependencies sind noch nicht alle Vue 3 kompatibel
+* Deprecation Warnings zeigen notwendige Änderungen auf.
+
+---
+layout: big-bullets
+heading: Workflow - Initiale Upgrades
+---
+
+1. Upgrade der notwendigen Dependencies
+2. Compat Mode aktivieren
+3. App starten
+4. Compiler Warnings fixen
+5. Auf Vuex `4.0` upgraden
+6. Auf VueRouter `3.0` upgraden
+
+Eure App läuft jetzt auf Vue 3 - mit Vue 2 Component Syntax! <span class="text-2xl">🤯</span>
+
+---
+layout: big-bullets
+heading: Workflow - Component Migration
+---
+
+* xxx
+
+---
+layout: big-bullets
+heading: Empfehlungen
+--- 
+
+* 
 
 ---
 layout: section
@@ -411,6 +437,20 @@ layout: section
 
 # Und nun?
 ## Wohin die Reise geht
+
+---
+
+# Developer Experience
+Vetur + Volar + VueDX
+
+---
+
+# Devtools
+Plugin API
+
+---
+
+# RFCs
 
 ---
 

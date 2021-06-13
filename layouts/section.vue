@@ -28,7 +28,7 @@ export default {
     /* opacity: .2; */
   }
   .section-enter-active {
-    transition: all .3s ease-in;
+    transition: all .3s ease-out;
     transform-origin: bottom right;
   }
   .section-enter-to {

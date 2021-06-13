@@ -11,7 +11,7 @@ export default {
     <slot/>
   </div>
 </template>
-<style lang="postcss" scoped>
+<style lang="postcss">
 .slidev-layout.default {
   background-image: url('/bg-default.svg');
   background-repeat: no-repeat;
