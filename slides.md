@@ -93,22 +93,48 @@ Offizielle Libraries
 
 <div class="mt-4 min-h-1"></div>
 
-* 18.09.2020 - Vue 3.0 **stable**
-* xx.xx.2020 - Vue CLI (Vue 3 Support) **stable**
-* xx.xx.2020 - Vuex 4.0 **stable** 
-* xx.xx.2021 - Vue Router 3.0 **stable**
-* xx.xx.2021 - vue-loader 16.0 **stable**
-* xx.xx.2021 - eslint-plugin-vue **stable**
+<div class="flex">
+  <div class="flex-grow">
 
-**Beta**
+  **Stable**
 
-* vue-devtools 6.0.0-beta.11
-* rollup-plugin-vue: 6.0.0-beta.11
+  * Vue 3.0 (_18.09.2020_)
+  * Vue CLI (Vue 3 Support) (_18.09.2020_)
+  * eslint-plugin-vue 7.0 (_30.09.2021_)
+  * vue-loader 16.0 (_25.11.2021_)
+  * Vue Router 3.0 (_07.12.2021_)
+  * Vuex 4.0 (_02.02.2021_)
 
-**Release Candidate**
-* vue-test-utils
+  </div>
+
+
+  <div v-click class="flex-grow">
+
+  **Beta**
+
+  * vue-devtools 6.0.0-beta.11
+  * rollup-plugin-vue: 6.0.0-beta.11
+  </div>
+
+  <div v-click class="flex-grow">
+
+  **Release Candidate**
+  * @vue/test-utils - 2.0.0-rc.6
+  
+  </div>
+</div>
+
+<hr v-click class="border-t-2 border-vgreen w-xl mt-8">
+<div v-after class="mt-4">
+
+* Offizielles Ökosystem fast vollständig stable
+* Q1/Q2 2021 wichtige Stablisierungsphase
+* Vue 3 bekam 11 Patch releases und erstes Minor Release 3.1 (07.06.2021)
+
+</div>
 
 ---
+
 # Wer macht was?
 
 TODO: show team and responsibilities
@@ -119,9 +145,38 @@ TODO: show team and responsibilities
 
 <div class="mt-12 min-h-1"></div>
 
-* Vuetify
-* Quasar
-* Nuxt
+<div class="flex">
+  <div class="flex-grow">
+  
+  **Frameworks**
+<!-- 
+  * Ant Design Vue - <Badge type="success">stable</Badge>
+  * Element-Plus - <Badge type="success">stable</Badge>
+  * Quasar - <Badge type="warn">Beta</Badge>
+  * Vuetify - <Badge type="warn">Alpha</Badge>
+  * Nuxt - <Badge type="info">First beta announced</Badge>
+  * ChakraUI/Vue <Badge>under development</Badge> -->
+
+  </div>
+
+  <div class="flex-grow">
+  
+  **Libraries**
+
+  * xx
+  
+  </div>
+
+  <div class="flex-grow">
+
+  **Integrationen**
+
+  * Storybook `v6.3`
+  * Cypress
+  * Vite
+
+  </div>
+</div>
 
 ---
 
@@ -216,12 +271,12 @@ Virtal DOM
 
 # Beispiel
 
-<div class="font-sm">
+<!-- <div class="font-sm">
   <iframe src="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8aDE+V2VsY29tZSE8L2gxPlxuICA8ZGl2IGNsYXNzPVwic3RhdGljXCI+XG4gICAgPE15Q29tcG9uZW50XG4gICAgICBwcm9wMT1cInN0YXRpY1wiXG4gICAgICA6c3VidGl0bGU9XCJzdWJ0aXRsZVwiXG4gICAgPlxuICAgICAgPHNwYW4+IHt7IG1zZyB9fTwvc3Bhbj5cbiAgICA8L015Q29tcG9uZW50PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4gIGltcG9ydCB7IHJlZiB9IGZyb20gJ3Z1ZSdcbiAgaW1wb3J0IE15Q29tcG9uZW50IGZyb20gJy4vTXlDb21wb25lbnQudnVlJ1xuICBcbiAgZXhwb3J0IGRlZmF1bHQge1xuICAgIGNvbXBvbmVudHM6IHtcbiAgICAgIE15Q29tcG9uZW50LFxuICAgIH0sXG4gICAgc2V0dXAoKSB7XG5cdFx0XHRjb25zdCBtc2cgPSAnSGVsbG8gV29ybGQhJ1xuXHRcdFx0Y29uc3Qgc3VidGl0bGUgPSByZWYoJ1RoaXMgaXMgdGhlIHN1YnRpdGxlJylcbiAgICAgIHJldHVybiB7XG4gICAgICAgIG1zZywgc3VidGl0bGVcbiAgICAgIH1cbiAgICB9XG4gIH1cbjwvc2NyaXB0PiIsIk15Q29tcG9uZW50LnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPHNsb3QgLz5cbjwvdGVtcGxhdGU+XG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuICBwcm9wczogWydwcm9wMScsICdzdWJ0aXRsZSddXG59XG48L3NjcmlwdD4ifQ=="
     width="900"
     height="400"
 ></iframe>
-</div>
+</div> -->
 
 ---
 layout: section
@@ -363,4 +418,4 @@ layout: section
 
 * Vue 3
 * Vite
-* 
+*

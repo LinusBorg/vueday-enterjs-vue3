@@ -10,7 +10,7 @@ export default {
   <div class="slidev-layout section">
     <div class="absolute inset-0 z-1">
       <transition appear name="section">
-        <img src="/bg-section.svg" alt="" v-if="$slidev.nav.currentLayout === 'section'">
+        <img src="/bg-section.svg" alt="" v-if="$slidev.nav.currentLayout === 'section'" class="opacity-80">
       </transition>
     </div>
     
@@ -25,7 +25,7 @@ export default {
 <style lang="postcss" scoped>
   .section-enter-from {
     transform: rotate(1deg);
-    opacity: .8;
+    /* opacity: .2; */
   }
   .section-enter-active {
     transition: all .3s ease-in;
@@ -38,7 +38,7 @@ export default {
   .slidev-layout.section {
     
     & ::v-deep(h1) {
-      @apply text-5xl;
+      @apply text-5xl text-vblue;
     }
   }
 </style>

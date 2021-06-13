@@ -237,7 +237,7 @@
     "@slidev/types" "0.20.4"
     js-yaml "^4.1.0"
 
-"@slidev/theme-apple-basic@^0.20.0":
+"@slidev/theme-apple-basic@^0.19.0":
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/@slidev/theme-apple-basic/-/theme-apple-basic-0.19.0.tgz#feace7a62d5bf80c11dce43b904e2788e6397f98"
   integrity sha512-uPNwjZ80FISka+3pOHEFSWkAEa77BlEEWbYwIG5J7+BrjIRRLoUC1YJ47pLA4Tp3SMhAc6qhzB8Sy66HL4+QPg==
@@ -247,7 +247,7 @@
     prism-theme-vars "^0.2.2"
     theme-vitesse "^0.1.11"
 
-"@slidev/theme-default@>=0.7", "@slidev/theme-default@^0.20.0":
+"@slidev/theme-default@>=0.7", "@slidev/theme-default@^0.19.0":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@slidev/theme-default/-/theme-default-0.19.1.tgz#2862091deca5bab84d148f92f93d9f603edc0527"
   integrity sha512-SB98kdLzFevpKONZcIla5byQdTiIqaf+jKJi8Shy0pxUDT+aMpkfKq1yudgjnN9yt7E/NH7xB9menZHQov0zDw==
@@ -257,7 +257,7 @@
     prism-theme-vars "^0.2.2"
     theme-vitesse "^0.1.11"
 
-"@slidev/theme-seriph@^0.20.0":
+"@slidev/theme-seriph@^0.19.0":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@slidev/theme-seriph/-/theme-seriph-0.19.1.tgz#96ba9bd5d0e37fdc2be6b2dfe7681dea52a0f549"
   integrity sha512-VGvcGLKgwRHHeyHvNp8eW/0+8nOykb90wIf2bm09AjMsOaJgH3HXqJzOOr7ACKVY4aML49DDz2EwZTGOfxdnNA==
