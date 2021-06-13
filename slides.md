@@ -3,11 +3,12 @@
 theme: default
 colorSchema: light
 # random image from a curated Unsplash collection by Anthony
-background: 'https://source.unsplash.com/collection/94734566/1920x1080'
 highlighter: shiki
 # apply any windi css classes to the current slide
 # class: 'text-center'
 layout: cover
+fonts:
+  sans: 'Source Sans Pro'
 ---
 
 # Vue 3 > Vue 2 + 1
@@ -36,12 +37,12 @@ Mehr als ein Major Release
 </div>
 
 ---
-layout: quote
----
+
+<div class="mt-12 min-h-1"></div>
+<div>
 
 # Semver
  
-<!-- <div class="mt-12 min-h-1"></div> -->
 
 Given a version number MAJOR.MINOR.PATCH, increment the
 
@@ -50,6 +51,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the
 * PATCH version when you make backwards compatible bug fixes.
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+</div>
+
 
 ---
 
@@ -214,7 +217,7 @@ Virtal DOM
 # Beispiel
 
 <div class="font-sm">
-  <iframe src="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8aDE+V2VsY29tZSE8L2gxPlxuICA8ZGl2IGNsYXNzPVwic3RhdGljXCI+XG4gICAgPE15Q29tcG9uZW50XG4gICAgICBwcm9wMT1cInN0YXRpY1wiXG4gICAgICA6c3VidGl0bGU9XCJ0aXRsZVwiXG4gICAgPlxuICAgICAgPHNwYW4+IHt7IG1zZyB9fTwvc3Bhbj5cbiAgICA8L015Q29tcG9uZW50PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4gIGV4cG9ydCBkZWZhdWx0IHtcbiAgICBzZXR1cCgpIHtcblx0XHRcdGNvbnN0IG1zZyA9ICdIZWxsbyBXb3JsZCEnXG5cdFx0XHRjb25zdCBzdWJ0aXRsZSA9IHJlZignVGhpcyBpcyB0aGUgc3VidGl0bGUnKVxuICAgICAgcmV0dXJuIHtcbiAgICAgICAgbXNnLCBzdWJ0aXRsZVxuICAgICAgfVxuICAgIH1cbiAgfVxuPC9zY3JpcHQ+IiwiTXlDb21wb25lbnQudnVlIjoiPHRlbXBsYXRlPlxuICA8c2xvdCAvPlxuPC90ZW1wbGF0ZT4ifQ=="
+  <iframe src="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8aDE+V2VsY29tZSE8L2gxPlxuICA8ZGl2IGNsYXNzPVwic3RhdGljXCI+XG4gICAgPE15Q29tcG9uZW50XG4gICAgICBwcm9wMT1cInN0YXRpY1wiXG4gICAgICA6c3VidGl0bGU9XCJzdWJ0aXRsZVwiXG4gICAgPlxuICAgICAgPHNwYW4+IHt7IG1zZyB9fTwvc3Bhbj5cbiAgICA8L015Q29tcG9uZW50PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4gIGltcG9ydCB7IHJlZiB9IGZyb20gJ3Z1ZSdcbiAgaW1wb3J0IE15Q29tcG9uZW50IGZyb20gJy4vTXlDb21wb25lbnQudnVlJ1xuICBcbiAgZXhwb3J0IGRlZmF1bHQge1xuICAgIGNvbXBvbmVudHM6IHtcbiAgICAgIE15Q29tcG9uZW50LFxuICAgIH0sXG4gICAgc2V0dXAoKSB7XG5cdFx0XHRjb25zdCBtc2cgPSAnSGVsbG8gV29ybGQhJ1xuXHRcdFx0Y29uc3Qgc3VidGl0bGUgPSByZWYoJ1RoaXMgaXMgdGhlIHN1YnRpdGxlJylcbiAgICAgIHJldHVybiB7XG4gICAgICAgIG1zZywgc3VidGl0bGVcbiAgICAgIH1cbiAgICB9XG4gIH1cbjwvc2NyaXB0PiIsIk15Q29tcG9uZW50LnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPHNsb3QgLz5cbjwvdGVtcGxhdGU+XG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuICBwcm9wczogWydwcm9wMScsICdzdWJ0aXRsZSddXG59XG48L3NjcmlwdD4ifQ=="
     width="900"
     height="400"
 ></iframe>

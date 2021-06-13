@@ -75,7 +75,7 @@
   dependencies:
     pako "^1.0.10"
 
-"@slidev/cli@>=0.9", "@slidev/cli@^0.19.0":
+"@slidev/cli@>=0.9":
   version "0.19.6"
   resolved "https://registry.yarnpkg.com/@slidev/cli/-/cli-0.19.6.tgz#79bf0c5c7657bc140d4b5ccbf75e01d83eeb613b"
   integrity sha512-VAlYmdVtnqQr8/+fcvvbRNkNFy/SYeTW6iE6oWgvImn2OSN6nc1xYUpxQbPYPIwXR2qTT43UH865tCBYN7PQLQ==
@@ -121,6 +121,52 @@
     windicss "^3.1.1"
     yargs "^17.0.1"
 
+"@slidev/cli@^0.20.0":
+  version "0.20.4"
+  resolved "https://registry.yarnpkg.com/@slidev/cli/-/cli-0.20.4.tgz#b912476d63d3dd0633ed2ca4478187f84e3961b4"
+  integrity sha512-j97HL9JPs+ETtqoribd0ayzxLlaAznW9XkfDFxQjrNKpL93gms6hCL0+yYuGzPJPJME8H0EDIr9zvmEohJFVFQ==
+  dependencies:
+    "@antfu/utils" "^0.1.6"
+    "@iconify/json" "^1.1.338"
+    "@slidev/client" "0.20.4"
+    "@slidev/parser" "0.20.4"
+    "@slidev/types" "0.20.4"
+    "@vitejs/plugin-vue" "^1.2.3"
+    "@vue/compiler-sfc" "3.0.11"
+    cli-progress "^3.9.0"
+    codemirror "^5.61.1"
+    connect "^3.7.0"
+    debug "^4.3.2"
+    fast-glob "^3.2.5"
+    fs-extra "^10.0.0"
+    import-from "^4.0.0"
+    is-installed-globally "^0.4.0"
+    jiti "^1.10.1"
+    js-base64 "^3.6.1"
+    katex "^0.13.11"
+    kolorist "^1.4.1"
+    markdown-it "^12.0.6"
+    markdown-it-link-attributes "^3.0.0"
+    monaco-editor "^0.24.0"
+    nanoid "^3.1.23"
+    open "^8.2.0"
+    pdf-lib "^1.16.0"
+    prismjs "^1.23.0"
+    prompts "^2.4.1"
+    resolve "^1.20.0"
+    resolve-from "^5.0.0"
+    resolve-global "^1.0.0"
+    shiki "^0.9.4"
+    vite "^2.3.7"
+    vite-plugin-components "^0.10.4"
+    vite-plugin-icons "^0.6.1"
+    vite-plugin-md "^0.6.7"
+    vite-plugin-remote-assets "^0.2.2"
+    vite-plugin-windicss "^1.0.3"
+    vue "3.0.11"
+    windicss "^3.1.3"
+    yargs "^17.0.1"
+
 "@slidev/client@0.19.6":
   version "0.19.6"
   resolved "https://registry.yarnpkg.com/@slidev/client/-/client-0.19.6.tgz#7fecace3340b96fc15c5af621f9d8709dc21399a"
@@ -148,6 +194,33 @@
     vue-router "^4.0.8"
     windicss "^3.1.1"
 
+"@slidev/client@0.20.4":
+  version "0.20.4"
+  resolved "https://registry.yarnpkg.com/@slidev/client/-/client-0.20.4.tgz#6f0aea2ca4abccb5663bc3d22f916edf1a1d79e0"
+  integrity sha512-8V09M+fk2ly7ifCNPabi0kDSIMObmEGqmAdwsoMMiQ0XFDxVBXrKK6x35zY455kY4E6dDl2X9OMNoqNmP7ibjw==
+  dependencies:
+    "@antfu/utils" "^0.1.6"
+    "@slidev/parser" "0.20.4"
+    "@slidev/types" "0.20.4"
+    "@vueuse/core" "^5.0.1"
+    "@vueuse/head" "^0.6.0"
+    "@vueuse/motion" "^1.5.6"
+    codemirror "^5.61.1"
+    file-saver "^2.0.5"
+    js-base64 "^3.6.1"
+    js-yaml "^4.1.0"
+    katex "^0.13.11"
+    mermaid "8.5.0"
+    monaco-editor "^0.24.0"
+    nanoid "^3.1.23"
+    prettier "^2.3.1"
+    recordrtc "^5.6.2"
+    resolve "^1.20.0"
+    vite-plugin-windicss "^1.0.3"
+    vue "3.0.11"
+    vue-router "^4.0.8"
+    windicss "^3.1.3"
+
 "@slidev/parser@0.19.6":
   version "0.19.6"
   resolved "https://registry.yarnpkg.com/@slidev/parser/-/parser-0.19.6.tgz#994c69a4733376b340456ea472f1fd3727169ffa"
@@ -156,7 +229,15 @@
     "@slidev/types" "0.19.6"
     js-yaml "^4.1.0"
 
-"@slidev/theme-apple-basic@^0.19.0":
+"@slidev/parser@0.20.4":
+  version "0.20.4"
+  resolved "https://registry.yarnpkg.com/@slidev/parser/-/parser-0.20.4.tgz#3fad96dc06975e819573b1c7a1abfcddcf97c2a2"
+  integrity sha512-HG+ISzhUAUg8rYBZeEK8vgp0trBVU9VceVVhelntM6jtXW8fBoc1mM5qYAH+ICB0k3a22WID1zwKj0birEOi8A==
+  dependencies:
+    "@slidev/types" "0.20.4"
+    js-yaml "^4.1.0"
+
+"@slidev/theme-apple-basic@^0.20.0":
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/@slidev/theme-apple-basic/-/theme-apple-basic-0.19.0.tgz#feace7a62d5bf80c11dce43b904e2788e6397f98"
   integrity sha512-uPNwjZ80FISka+3pOHEFSWkAEa77BlEEWbYwIG5J7+BrjIRRLoUC1YJ47pLA4Tp3SMhAc6qhzB8Sy66HL4+QPg==
@@ -166,7 +247,7 @@
     prism-theme-vars "^0.2.2"
     theme-vitesse "^0.1.11"
 
-"@slidev/theme-default@>=0.7", "@slidev/theme-default@^0.19.0":
+"@slidev/theme-default@>=0.7", "@slidev/theme-default@^0.20.0":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@slidev/theme-default/-/theme-default-0.19.1.tgz#2862091deca5bab84d148f92f93d9f603edc0527"
   integrity sha512-SB98kdLzFevpKONZcIla5byQdTiIqaf+jKJi8Shy0pxUDT+aMpkfKq1yudgjnN9yt7E/NH7xB9menZHQov0zDw==
@@ -176,7 +257,7 @@
     prism-theme-vars "^0.2.2"
     theme-vitesse "^0.1.11"
 
-"@slidev/theme-seriph@^0.19.0":
+"@slidev/theme-seriph@^0.20.0":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@slidev/theme-seriph/-/theme-seriph-0.19.1.tgz#96ba9bd5d0e37fdc2be6b2dfe7681dea52a0f549"
   integrity sha512-VGvcGLKgwRHHeyHvNp8eW/0+8nOykb90wIf2bm09AjMsOaJgH3HXqJzOOr7ACKVY4aML49DDz2EwZTGOfxdnNA==
@@ -190,6 +271,11 @@
   version "0.19.6"
   resolved "https://registry.yarnpkg.com/@slidev/types/-/types-0.19.6.tgz#0211bd772d18e830b7b8dfce3f58a984590f3562"
   integrity sha512-8+E94tn5yT9pdPer5Zf+Rl/W4nhlvZG7yuFTRPU351O50BTwBeTwV61OJ/7FU0CuVW+OzGyT9ytR760lm07KnA==
+
+"@slidev/types@0.20.4":
+  version "0.20.4"
+  resolved "https://registry.yarnpkg.com/@slidev/types/-/types-0.20.4.tgz#df83c5e94331eebd7fbb359a23df7f601e2cc318"
+  integrity sha512-U6uV7YK38g66eglGDSpa0GzOpzSkD/AMWqL5DYkPsD6OScSP5MHtdRcX/8JEj9bNPR3EF0Ianlr5zh6u3spBFA==
 
 "@vitejs/plugin-vue@^1.2.3":
   version "1.2.3"
@@ -215,7 +301,7 @@
     "@vue/compiler-core" "3.0.11"
     "@vue/shared" "3.0.11"
 
-"@vue/compiler-sfc@^3.0.11":
+"@vue/compiler-sfc@3.0.11", "@vue/compiler-sfc@^3.0.11":
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-3.0.11.tgz#cd8ca2154b88967b521f5ad3b10f5f8b6b665679"
   integrity sha512-7fNiZuCecRleiyVGUWNa6pn8fB2fnuJU+3AGjbjl7r1P5wBivfl02H4pG+2aJP5gh2u+0wXov1W38tfWOphsXw==
@@ -295,6 +381,14 @@
     "@vueuse/shared" "5.0.0"
     vue-demi "*"
 
+"@vueuse/core@^5.0.1":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-5.0.2.tgz#302389f620c0d4b51fdf157012d9b5b522b605e7"
+  integrity sha512-Sp9+7AL4Cg3Tx6I55WoH7zICGRlp6ZUF9NW3EU8SZTkryHm0afAjFfASMwlfV030JFeh45BdqafDOrenVmM9Cw==
+  dependencies:
+    "@vueuse/shared" "5.0.2"
+    vue-demi "*"
+
 "@vueuse/head@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.6.0.tgz#5584b1f724327cfce941c42efec9e590f5799329"
@@ -323,6 +417,13 @@
   dependencies:
     vue-demi "*"
 
+"@vueuse/shared@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-5.0.2.tgz#274c2bf163d25eb7fd2fc51f23088a2b7f060594"
+  integrity sha512-S1hRRmEdipjTD4DbXgPdw4ZZYebU/nDi75vNP3Ibpa1irW3NUNUKOT/TWnwRHLQvXquUtdvalhI8D9Db+czZJg==
+  dependencies:
+    vue-demi "*"
+
 "@windicss/plugin-utils@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@windicss/plugin-utils/-/plugin-utils-1.0.1.tgz#f6281c91a37be5ea48eb4573cb511ccb82cce16a"
@@ -335,6 +436,19 @@
     magic-string "^0.25.7"
     micromatch "^4.0.4"
     windicss "^3.1.0"
+
+"@windicss/plugin-utils@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@windicss/plugin-utils/-/plugin-utils-1.0.3.tgz#04d039ef56b58180079df3f9b3bd8a21a57368d3"
+  integrity sha512-SBYjmWBO+dOqxJgyyOAETOuMdcugvVgZYQc3rb7KtcTW5u9UkFXtiuGdoq8cWyFpSkn46gmjCb4WNbY3kEIVnQ==
+  dependencies:
+    "@antfu/utils" "^0.1.6"
+    debug "^4.3.2"
+    fast-glob "^3.2.5"
+    jiti "^1.10.1"
+    magic-string "^0.25.7"
+    micromatch "^4.0.4"
+    windicss "^3.1.3"
 
 ansi-regex@^5.0.0:
   version "5.0.0"
@@ -1602,7 +1716,16 @@ postcss@^8.2.10:
     nanoid "^3.1.23"
     source-map-js "^0.6.2"
 
-prettier@^2.3.0:
+postcss@^8.3.0:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.2.tgz#ed3ec489f5428af5740cd6effcc216b4d455ee64"
+  integrity sha512-y1FK/AWdZlBF5lusS5j5l4/vF67+vQZt1SXPVJ32y1kRGDQyrs1zk32hG1cInRTu14P0V+orPz+ifwW/7rR4bg==
+  dependencies:
+    colorette "^1.2.2"
+    nanoid "^3.1.23"
+    source-map-js "^0.6.2"
+
+prettier@^2.3.0, prettier@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.1.tgz#76903c3f8c4449bc9ac597acefa24dc5ad4cbea6"
   integrity sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA==
@@ -1971,6 +2094,16 @@ vite-plugin-windicss@^1.0.1:
     debug "^4.3.2"
     windicss "^3.1.0"
 
+vite-plugin-windicss@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vite-plugin-windicss/-/vite-plugin-windicss-1.0.3.tgz#bd45cfee13777e7b57c37a257ebcb7e73fee94ab"
+  integrity sha512-y9pudcMajdI88PTs49qGftlfAvsLUUhK2Eig+xn5sgxPCbAc3Rj5phXJkRzGDqfmEzGwbpF6JwjmiGmZkm8V+g==
+  dependencies:
+    "@windicss/plugin-utils" "1.0.3"
+    chalk "^4.1.1"
+    debug "^4.3.2"
+    windicss "^3.1.3"
+
 vite@^2.3.6:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.3.6.tgz#1f7cfde88a51a802d69000c7bac85d481c2e871c"
@@ -1978,6 +2111,18 @@ vite@^2.3.6:
   dependencies:
     esbuild "^0.12.5"
     postcss "^8.2.10"
+    resolve "^1.19.0"
+    rollup "^2.38.5"
+  optionalDependencies:
+    fsevents "~2.3.1"
+
+vite@^2.3.7:
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.3.7.tgz#3023892419367465e1af1739578f8663d04243b2"
+  integrity sha512-Y0xRz11MPYu/EAvzN94+FsOZHbSvO6FUvHv127CyG7mV6oDoay2bw+g5y9wW3Blf8OY3chaz3nc/DcRe1IQ3Nw==
+  dependencies:
+    esbuild "^0.12.5"
+    postcss "^8.3.0"
     resolve "^1.19.0"
     rollup "^2.38.5"
   optionalDependencies:
@@ -2005,7 +2150,7 @@ vue-template-es2015-compiler@^1.9.1:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^3.0.11:
+vue@3.0.11, vue@^3.0.11:
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.0.11.tgz#c82f9594cbf4dcc869241d4c8dd3e08d9a8f4b5f"
   integrity sha512-3/eUi4InQz8MPzruHYSTQPxtM3LdZ1/S/BvaU021zBnZi0laRUyH6pfuE4wtUeLvI8wmUNwj5wrZFvbHUXL9dw==
@@ -2018,6 +2163,11 @@ windicss@^3.1.0, windicss@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/windicss/-/windicss-3.1.1.tgz#f879661df4f3db92cc45c6214779f6c5efa4f95c"
   integrity sha512-vLtydYOqqLwb3Jg02QYqCnna1jONLt6GuDyAtRokQY81uA8BiOyN2y3ED9QGX28CIL5Zi7bpnkBL1f1g4CHuXQ==
+
+windicss@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/windicss/-/windicss-3.1.3.tgz#a4b80af48bdd5d4be13520f700b497af455df700"
+  integrity sha512-l7fpoba2LY9AYRy4UgcuOpbPsed8UsbpEQYUVWRR1wdAwiKxK6bGIMfpiKJtjPAPdh0GOGUqr6KJar0EDZSxzg==
 
 wrap-ansi@^7.0.0:
   version "7.0.0"
