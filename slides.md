@@ -36,27 +36,41 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ---
 
-# Vue 3 ist ein kleines und großes Major Release
+# Vue 3 ist ein "kleines" & großes Major Release
  
 
-<div v-click class="mt-12">
-groß, denn:
+<div v-click="1" class="mt-8">
+<div class="mb-4 font-bold">
+ 
+ _~~klein~~_, nicht so groß in den API-Änderungen:
 
-* neu geschrieben - in Typescript
-* Compiler und VirtualDOM Implementierung neu und grundverschieden
-* ermöglicht erhebliche Performancezugewinne
-* Ökosystem muss nachziehen um kompatibel zu sein.
 </div>
-
-<div v-click class="mt-8">
-klein, denn:
 
 * Änderungen (breaking changes) sind zwar recht zahlreich...
 * ..aber: Umfang und Komplexität überschaubar
 * Wer eine Vue 2 App schreiben kann, kann mit Vue 3 direkt loslegen
-* "Compat Build" vereinfacht die schrittweise Migration von Apps
 </div>
 
+<div v-click="2" class="mt-8">
+<div class="mb-4 font-bold">
+  groß, unter der Haube:
+</div>
+
+* neu geschrieben - in Typescript
+* neue Features: Composition API<span class="text-red-500 text-xl">*</span>
+* Compiler und VirtualDOM Implementierung neu und grundverschieden
+* ermöglicht erhebliche Performancezugewinne
+
+</div>
+
+<div v-click="4" class="mt-8 mb-4 font-bold text-2xl">
+  mehr als ein Major Release: ein KickStart
+</div>
+
+
+<div v-click="3" class="absolute bottom-4 right-3">
+  <span class="text-red-500">*</span>: Nicht in diesem Talk inkludiert
+</div>
 
 ---
 layout: section
@@ -134,13 +148,19 @@ Virtual DOM
 
 ---
 
-# Beispiel
+# Ein Blick auf den Compiler
 
-<div class="font-sm">
+<div class="overflow-hidden absolute top-24 left-3 text-center">
   <iframe src="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8aDE+V2VsY29tZSE8L2gxPlxuICA8ZGl2IGNsYXNzPVwic3RhdGljXCI+XG4gICAgPE15Q29tcG9uZW50XG4gICAgICBwcm9wMT1cInN0YXRpY1wiXG4gICAgICA6c3VidGl0bGU9XCJzdWJ0aXRsZVwiXG4gICAgPlxuICAgICAgPHNwYW4+IHt7IG1zZyB9fTwvc3Bhbj5cbiAgICA8L015Q29tcG9uZW50PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4gIGltcG9ydCB7IHJlZiB9IGZyb20gJ3Z1ZSdcbiAgaW1wb3J0IE15Q29tcG9uZW50IGZyb20gJy4vTXlDb21wb25lbnQudnVlJ1xuICBcbiAgZXhwb3J0IGRlZmF1bHQge1xuICAgIGNvbXBvbmVudHM6IHtcbiAgICAgIE15Q29tcG9uZW50LFxuICAgIH0sXG4gICAgc2V0dXAoKSB7XG5cdFx0XHRjb25zdCBtc2cgPSAnSGVsbG8gV29ybGQhJ1xuXHRcdFx0Y29uc3Qgc3VidGl0bGUgPSByZWYoJ1RoaXMgaXMgdGhlIHN1YnRpdGxlJylcbiAgICAgIHJldHVybiB7XG4gICAgICAgIG1zZywgc3VidGl0bGVcbiAgICAgIH1cbiAgICB9XG4gIH1cbjwvc2NyaXB0PiIsIk15Q29tcG9uZW50LnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPHNsb3QgLz5cbjwvdGVtcGxhdGU+XG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuICBwcm9wczogWydwcm9wMScsICdzdWJ0aXRsZSddXG59XG48L3NjcmlwdD4ifQ=="
-    width="900"
-    height="400"
+    width="960"
+    height="460"
+    class="-mt-14 mb-2"
 ></iframe>
+<a 
+class="text-blue-600 underline"
+href="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8aDE+V2VsY29tZSE8L2gxPlxuICA8ZGl2IGNsYXNzPVwic3RhdGljXCI+XG4gICAgPE15Q29tcG9uZW50XG4gICAgICBwcm9wMT1cInN0YXRpY1wiXG4gICAgICA6c3VidGl0bGU9XCJzdWJ0aXRsZVwiXG4gICAgPlxuICAgICAgPHNwYW4+IHt7IG1zZyB9fTwvc3Bhbj5cbiAgICA8L015Q29tcG9uZW50PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG4gIGltcG9ydCB7IHJlZiB9IGZyb20gJ3Z1ZSdcbiAgaW1wb3J0IE15Q29tcG9uZW50IGZyb20gJy4vTXlDb21wb25lbnQudnVlJ1xuICBcbiAgZXhwb3J0IGRlZmF1bHQge1xuICAgIGNvbXBvbmVudHM6IHtcbiAgICAgIE15Q29tcG9uZW50LFxuICAgIH0sXG4gICAgc2V0dXAoKSB7XG5cdFx0XHRjb25zdCBtc2cgPSAnSGVsbG8gV29ybGQhJ1xuXHRcdFx0Y29uc3Qgc3VidGl0bGUgPSByZWYoJ1RoaXMgaXMgdGhlIHN1YnRpdGxlJylcbiAgICAgIHJldHVybiB7XG4gICAgICAgIG1zZywgc3VidGl0bGVcbiAgICAgIH1cbiAgICB9XG4gIH1cbjwvc2NyaXB0PiIsIk15Q29tcG9uZW50LnZ1ZSI6Ijx0ZW1wbGF0ZT5cbiAgPHNsb3QgLz5cbjwvdGVtcGxhdGU+XG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuICBwcm9wczogWydwcm9wMScsICdzdWJ0aXRsZSddXG59XG48L3NjcmlwdD4ifQ=="
+>
+sfc.vuejs.org</a>
 </div>
 
 ---
@@ -164,6 +184,12 @@ Offizielle Libraries
 
   </div>
 
+  <div v-click class="flex-grow">
+
+  **Release Candidate**
+  * @vue/test-utils - 2.0.0-rc.6
+  
+  </div>
 
   <div v-click class="flex-grow">
 
@@ -173,12 +199,6 @@ Offizielle Libraries
   * rollup-plugin-vue: 6.0.0-beta.11
   </div>
 
-  <div v-click class="flex-grow">
-
-  **Release Candidate**
-  * @vue/test-utils - 2.0.0-rc.6
-  
-  </div>
 </div>
 
 <hr v-click class="border-t-2 border-vgreen w-xl mt-8">
@@ -189,12 +209,6 @@ Offizielle Libraries
 * Vue 3 bekam 11 Patch releases und erstes Minor Release 3.1 (07.06.2021)
 
 </div>
-
----
-
-# Wer macht was?
-
-TODO: show team and responsibilities
 
 ---
 
@@ -216,18 +230,12 @@ TODO: show team and responsibilities
 
   </div>
 
-  <!-- <div class="flex-grow">
-  
-  **Libraries**
-
-  * xx
-  
-  </div> -->
-
   <div class="flex-grow">
 
   **Integrationen**
 
+  * VSCode
+  * Jetbrains Webstorm / PHPStorm etc
   * Storybook <code>v6.3</code>
   * Cypress
   * Vite
@@ -411,7 +419,7 @@ heading: Workflow - Initiale Upgrades
 1. Upgrade der notwendigen Dependencies
 2. Compat Mode aktivieren
 3. App starten
-4. Compiler Warnings fixen
+4. Compiler Warnings fixen (z.B. wegen Filters)
 5. Auf Vuex `4.0` upgraden
 6. Auf VueRouter `3.0` upgraden
 
@@ -419,17 +427,137 @@ Eure App läuft jetzt auf Vue 3 - mit Vue 2 Component Syntax! <span class="text-
 
 ---
 layout: big-bullets
-heading: Workflow - Component Migration
+heading: Workflows für die Migration
 ---
 
-* xxx
+<div class="mb-12 text-3xl text-center">2 Varianten:</div>
+
+1. Migration per Feature
+2. Migration per Component
+
+---
+layout: default
+---
+
+# Migration - per Feature
+
+<div class="flex mt-8">
+
+<div v-click class="flex-grow w-1/2 pr-2">
+
+* Ein Feature aussuchen - z.B. Lifecycle hooks
+* in jeder Component migrieren
+
+Von Vue 2:
+
+```js{2}
+export default {
+  beforeDestroy() {
+    this.doSomething()
+  }
+}
+```
+
+zu Vue 3:
+
+```js{2}
+export default {
+  beforeUnmount() {
+    this.doSomething()
+  }
+}
+```
+
+</div>
+<div v-click class="flex-grow w-1/2 border-l border-vgreen pl-2">
+
+* Anschließend das compat feature global deaktivieren
+
+```js{8-10}
+// main.js
+import { 
+createApp,
+configureCompat 
+} from 'vue'
+import App from './App.vue'
+
+configureCompat({
+  OPTIONS_BEFORE_DESTROY: false,
+})
+
+createApp(App).mount('#app')
+```
+
+</div>
+
+</div>
+
+---
+
+# Migration - per Component
+
+* Alle Migrationen in einer Component vornehmen
+
+<div class="flex mt-8">
+
+<div v-click class="flex-grow w-1/2 pr-2">
+
+```js{2,4,8,11}
+export default {
+  props: ['value']
+  components: {
+    Child: () => import('./Child.vue')
+  },
+  methods: {
+    update(value) {
+      this.$emit('input', value)
+    },
+  },
+  beforeDestroy() {
+    this.doSomething()
+  }
+}
+```
+
+</div>
+<div v-click class="flex-grow w-1/2 border-l border-vgreen pl-2">
+
+```js{2-5,7-9,13,16}
+export default {
+  compatConfig: {
+    MODE: 3,
+  },
+  props: ['value']
+  components: {
+    Child: defineAsyncComponent(
+      () => import('./Child.vue')
+    )
+  },
+  methods: {
+    update(value) {
+      this.$emit('input', value)
+    },
+  },
+  beforeDestroy() {
+    this.doSomething()
+  }
+}
+```
+
+</div>
+
+</div>
+
 
 ---
 layout: big-bullets
 heading: Empfehlungen
 --- 
 
-* 
+* Wir werden eine **MENGE** warnings sehen - keine Panik!
+* Migriert zuerst "find&replace" features global in allen Components
+* Migriert danach einzelne Components
+* Migriert zuletzt eure dependencies auf ihre Vue 3 versionen
 
 ---
 layout: section
@@ -451,6 +579,9 @@ Plugin API
 ---
 
 # RFCs
+
+* Was geht ab?
+
 
 ---
 
