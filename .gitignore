@@ -2,6 +2,6 @@ node_modules
 .DS_Store
 dist
 *.local
-index.html
+# index.html
 .remote-assets
 slides-export.pdf
