@@ -78,7 +78,7 @@ layout: section
 ---
 
 # Ein großes Major Release
-## Was bedeutet das genau?
+## unter der Haube
 
 ---
 layout: big-bullets
@@ -234,7 +234,7 @@ Offizielle Libraries
 
   **Integrationen**
 
-  * VSCode
+  * VSCode (Volar)
   * Jetbrains Webstorm / PHPStorm etc
   * Storybook <code>v6.3</code>
   * Cypress
@@ -247,7 +247,7 @@ Offizielle Libraries
 
 # Next -> Latest
  
-<div class="mt-12 min-h-1" ></div>
+<div class="mt-12 min-h-1 !text-3xl" ></div>
 
 Bisher:
 
@@ -266,23 +266,42 @@ npm i vue
 
 # Vue 3 Contributions
 
-* Vue 3:
-  * 1.372 gemergte PRs
-  * 234 Contributors 
-  * ...seit Alpha release seit 03.01.2020
-* im Vergleich: Vue 2
-  * 1.036 merged PRs
-  * 399 Contributors
-  * ... seit 11.06.2016
+<div class="flex mt-12 gap-12">
+  <div class="w-1/2 text-center">
+  
+  <h2>Vue 2</h2>
+  <span class="italic text-sm">seit 11.06.2016</span>
 
-PS: Vue 2 wird morgen quasi 5 Jahre alt! 🥳
+  <span class="text-4xl font-bold">1.036</span><br> merged PRs
+  <hr class="w-9/12 my-8">
+  <span class="text-4xl font-bold">399</span><br> Contributors
+
+  
+  </div>
+  <div v-click class="w-1/2 text-center">
+
+  <h2>Vue 3</h2>
+  <span class="italic text-sm">seit 03.01.2020</span>
+
+  <span class="text-4xl font-bold">1.372</span><br> merged PRs
+  <hr class="w-9/12 my-8">
+  <span class="text-4xl font-bold">234</span><br> Contributors
+  
+  </div>
+</div>
+
+<hr v-click class="mt-8 mb-12">
+
+<h2 v-after class="text-center">
+  PS: Vue 2 wurde gerade 5 Jahre alt! 🥳
+</h2>
 
 ---
 layout: section
 ---
 
 # Ein "kleines" Major Release
-Breaking Changes aus Nutzer-Sicht
+Für Developer
 
 ---
 
@@ -414,6 +433,7 @@ heading: Warum eine Migration Build?
 ---
 layout: big-bullets
 heading: Workflow - Initiale Upgrades
+title: Workflow - Initiale Upgrades
 ---
 
 1. Upgrade der notwendigen Dependencies
@@ -428,6 +448,7 @@ Eure App läuft jetzt auf Vue 3 - mit Vue 2 Component Syntax! <span class="text-
 ---
 layout: big-bullets
 heading: Workflows für die Migration
+title: Workflows für die Migration
 ---
 
 <div class="mb-12 text-3xl text-center">2 Varianten:</div>
@@ -551,10 +572,13 @@ export default {
 
 ---
 layout: big-bullets
-heading: Empfehlungen
+heading: Tips
+title: Tips
 --- 
 
-* Wir werden eine **MENGE** warnings sehen - keine Panik!
+* Ihr werdet eine **MENGE** Warnings sehen - keine Panik!
+  * Nur in development
+  * Minimaler Perf-Overhead, wettgemacht durch Vue 3 Perf-Verbesserungen
 * Migriert zuerst "find&replace" features global in allen Components
 * Migriert danach einzelne Components
 * Migriert zuletzt eure dependencies auf ihre Vue 3 versionen
@@ -563,30 +587,125 @@ heading: Empfehlungen
 layout: section
 ---
 
-# Und nun?
+# Mehr als ein Major Release
 ## Wohin die Reise geht
 
 ---
+layout: big-bullets
+heading: DX - IDE Integration
+title: DX - IDE Integration
+---
 
-# Developer Experience
-Vetur + Volar + VueDX
+* Derzeit 3 Extensions: Vetur, VueDX, Volar
+* Neues Fundament wird Volar sein
+* Language Server Implementation auch für andere IDEs
+* **Type Hints / Autocomplete in Templates!**
+
+<div v-click class="absolute bottom-8 w-full">
+  <img src="/volar.png" class="w-6/10">
+</div>
+
+
+---
+layout: big-bullets
+heading: DX - Devtools 6.0
+title: DX - Devtools 6.0
+---
+
+* Neu: Performance Messung
+* Neu: Events timeline
+* Neu: Plugin API
 
 ---
 
-# Devtools
-Plugin API
+# Performance Messung
+
+<img class="mx-auto" src="/devtools-perf1.png">
+<img class="mx-auto mt-12" src="/devtools-perf2.png">
 
 ---
 
-# RFCs
+# Plugin API
 
-* Was geht ab?
+<img class="mx-auto" src="/pinia.png">
+<br>
+<div class="text-center">
+  <a class="text-xl text-blue-600" href="https://devtools.vuejs.org/plugin/plugins-guide.html">Plugin API Docs</a>
+</div>
+
+---
+
+# RFCs - `<script setup>`
+
+<style>
+  .slidev-layout {
+    @apply !text-4xl
+  }
+</style>
+<div class="flex gap-4 w-full mt-12">
+  <div class="flex-grow w-1/3">
+
+  * Reduziert boilerplate
+  * Performance-Potentiale
+
+  <div class="mt-12">
+    <a class="text-xl text-blue-600" href="https://github.com/vuejs/rfcs/pull/227">Link zum RFC</a>
+  </div>
+
+  </div>
+  <div class="flex-grow w-2/3">
+
+  ```html
+  <script setup>
+  import Foo from './Foo.vue'
+  import { ref, defineProps } from 'vue'
+
+  const props = defineProps({
+    title: String,
+  })
+
+  const count = ref(0)
+  const inc = () => { count.value++ }
+  </script>
+
+  <template>
+    <h1>{{ props.title }}</h1>
+    <Foo :count="count" @click="inc" />
+  </template>
+  ```
+
+  </div>
+</div>
 
 
 ---
 
 # Dieser Talk wurde mit Slidev gebaut
 
-* Vue 3
-* Vite
-*
+<div class="flex mt-12">
+  <div class="flex-grow text-center">
+  
+  <img src="/slidev.png" width="350">
+
+  <a class="text-blue-600 text-2xl" href="https://www.sli.dev">www.sli.dev</a>
+  
+  </div>
+  <div class="flex-grow text-2xl">
+
+  <v-clicks>
+
+  * Vite
+  * Slides mit Markdown schreiben
+  * Vue 3 Components in Markdown
+  * Presenter Mode
+  * Recording im Browser
+  * PDF Export
+  * Deployable als App
+
+  </v-clicks>
+
+  <a v-click class="text-blue-600 text-2xl" href="https://vueday-2021.linusb.org">vueday-2021.linusb.org</a>
+
+  
+  </div>
+</div>
