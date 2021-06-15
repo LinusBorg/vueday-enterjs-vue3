@@ -424,6 +424,7 @@ layout: section
 ---
 layout: big-bullets
 heading: Warum eine Migration Build?
+title: Warum eine Migration Build?
 ---
 
 * Migration großer Projekte nicht "an einem Wochenende"
@@ -548,7 +549,7 @@ export default {
   compatConfig: {
     MODE: 3,
   },
-  props: ['value']
+  props: ['modelValue']
   components: {
     Child: defineAsyncComponent(
       () => import('./Child.vue')
@@ -556,10 +557,10 @@ export default {
   },
   methods: {
     update(value) {
-      this.$emit('input', value)
+      this.$emit('update:modelValue', value)
     },
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.doSomething()
   }
 }
@@ -582,6 +583,15 @@ title: Tips
 * Migriert zuerst "find&replace" features global in allen Components
 * Migriert danach einzelne Components
 * Migriert zuletzt eure dependencies auf ihre Vue 3 versionen
+
+---
+
+# Migration Build docs
+
+<iframe
+class="w-full h-9/10 mx-auto"
+src="https://v3.vuejs.org/guide/migration/migration-build.html"
+></iframe>
 
 ---
 layout: section
@@ -699,6 +709,7 @@ title: DX - Devtools 6.0
   * Vue 3 Components in Markdown
   * Presenter Mode
   * Recording im Browser
+  * VS Code Extension
   * PDF Export
   * Deployable als App
 
