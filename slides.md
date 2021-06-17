@@ -177,9 +177,9 @@ Offizielle Libraries
 
   * Vue 3.0 (_18.09.2020_)
   * Vue CLI (Vue 3 Support) (_18.09.2020_)
-  * eslint-plugin-vue 7.0 (_30.09.2021_)
-  * vue-loader 16.0 (_25.11.2021_)
-  * Vue Router 3.0 (_07.12.2021_)
+  * eslint-plugin-vue 7.0 (_30.09.2020_)
+  * vue-loader 16.0 (_25.11.2020_)
+  * Vue Router 4.0 (_07.12.2020_)
   * Vuex 4.0 (_02.02.2021_)
 
   </div>
